@@ -1,24 +1,55 @@
-// ПЕРЕМЕННЫЕ
-$df:flex;
-$jcsb: space-between;
-// ЦВЕТА
+// ПЕРЕМЕННЫЕ - var
+$sb: space-between;
+$sa: space-around;
+$se: space-evenly;
+
+// ЦВЕТА - color
 $color-1:#332208;
 $color-2:#FEFEFE;
 $color-3:#1B1818;
 $color-4:#C5AC2D;
-// РАЗМЕР ШРИФТОВ
-$fs16:1.6rem;
-$fs18:1.8rem;
+// РАЗМЕР ШРИФТОВ - font-size
+$f12:1.2rem;
+$f14:1.4rem;
+$f16:1.6rem;
+$f18:1.8rem;
+$f20:2rem;
+$f22:2.2rem;
+$f24:2.4rem;
+$f26:2.6rem;
+$f28:2.8rem;
+$f36:3.6rem;
+$f44:4.4rem;
+// ВЫСОТА ШРИФТОВ - line-height
+$lh12:1.2rem;
+$lh14:1.4rem;
+$lh16:1.6rem;
+$lh18:1.8rem;
+$lh20:2rem;
+$lh22:2.2rem;
+$lh24:2.4rem;
+$lh26:2.6rem;
+$lh28:2.8rem;
+$lh36:3.6rem;
+$lh44:4.4rem;
+$lh54:5.4rem;
 // ШРИФТЫ
 $roboto:'Roboto Condensed',
 sans-serif;
-$fira:'Fira Sans',
+$pop:'Poppins',
 sans-serif;
 
 // МИКСИНЫ
-@mixin jcsb($df, $jcsb) {
-    display: $df;
-    justify-content: $jcsb;
+@mixin font($size, $lh, $weight, $color) {
+    font-size: $size;
+    line-height: $lh;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin flex($sb) {
+    display: flex;
+    justify-content: $sb;
 }
 
 

@@ -1,0 +1,123 @@
+@import 'mq';
+@import 'my-vars_mixins';
+
+body {
+  font-family: $pop;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 500;
+  color: #544837;
+}
+
+.marathon {
+  // TODO сделать цвета под верстку
+  display: flex;
+  justify-content: space-evenly;
+  background: white;
+  opacity: 40%;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid $color-4;
+
+  &__link {
+    font-size: 1rem;
+    color: #FF9900;
+  }
+}
+
+.container {
+  max-width: 112.6rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.header__inner {
+  @include flex ($sb);
+  align-items: center;
+  height: 7.8rem;
+}
+
+.menu {
+  margin-left: auto;
+
+  &__list {
+    display: flex;
+
+    &-item {
+      &+& {
+        margin-left: 2.4rem;
+      }
+    }
+
+    &-link {
+      @include font($f18, $lh28, 400, #2F281E);
+    }
+  }
+}
+
+.user-nav {
+  margin-left: 5.2rem;
+  margin-right: 1.3rem;
+
+  &__link {
+    @include font($f16, $lh24, 600, #173A56);
+    border: .1rem solid #BCD0E5;
+    border-radius: .4rem;
+    padding: 1.1rem 2.3rem;
+
+    &+& {
+      background: #FF9900;
+      border-color: transparent;
+      color: white;
+      margin-left: 1.4rem;
+    }
+  }
+}
+
+.top {
+  &__inner {
+    padding: 13.3rem 0 8rem;
+    background: url('../img/top-bg.svg') no-repeat;
+    background-position: bottom right;
+  }
+
+
+  &__title {
+    @include font($f44, $lh54, 700, #2F281E);
+    margin-bottom: 3rem;
+    max-width: 51.8rem;
+  }
+
+  &__text {
+    @include font($f18, $lh28, 400, #544837);
+    max-width: 45.8rem;
+    margin-bottom: 4.5rem;
+
+  }
+
+  &__btn {
+    display: inline-block;
+    @include font($f16, $lh24, 700, #FFFFFF);
+    background: #FF9900;
+    border-radius: .4rem;
+    padding: 1.5rem 4rem;
+    margin-right: 3rem;
+    cursor: pointer;
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    padding-left: 2.8rem;
+    @include font($f16, $lh24, 600, #FF9900);
+    text-decoration: underline;
+
+    &::before {
+      @include pseudo($display: block, $pos: absolute, $content: '');
+      top: 0.2rem;
+      left: 0;
+      width: 1.7rem;
+      height: 1.9rem;
+      background-image: url(../img/play.svg);
+    }
+  }
+}

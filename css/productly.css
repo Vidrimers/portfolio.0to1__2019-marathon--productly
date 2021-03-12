@@ -1,0 +1,146 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 500;
+  color: #544837;
+}
+
+.marathon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: white;
+  opacity: 40%;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #C5AC2D;
+}
+
+.marathon__link {
+  font-size: 1rem;
+  color: #FF9900;
+}
+
+.container {
+  max-width: 112.6rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 7.8rem;
+}
+
+.menu {
+  margin-left: auto;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__list-item + .menu__list-item {
+  margin-left: 2.4rem;
+}
+
+.menu__list-link {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+  color: #2F281E;
+}
+
+.user-nav {
+  margin-left: 5.2rem;
+  margin-right: 1.3rem;
+}
+
+.user-nav__link {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  color: #173A56;
+  border: .1rem solid #BCD0E5;
+  border-radius: .4rem;
+  padding: 1.1rem 2.3rem;
+}
+
+.user-nav__link + .user-nav__link {
+  background: #FF9900;
+  border-color: transparent;
+  color: white;
+  margin-left: 1.4rem;
+}
+
+.top__inner {
+  padding: 13.3rem 0 8rem;
+  background: url("../img/top-bg.svg") no-repeat;
+  background-position: bottom right;
+}
+
+.top__title {
+  font-size: 4.4rem;
+  line-height: 5.4rem;
+  font-weight: 700;
+  color: #2F281E;
+  margin-bottom: 3rem;
+  max-width: 51.8rem;
+}
+
+.top__text {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+  color: #544837;
+  max-width: 45.8rem;
+  margin-bottom: 4.5rem;
+}
+
+.top__btn {
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: #FF9900;
+  border-radius: .4rem;
+  padding: 1.5rem 4rem;
+  margin-right: 3rem;
+  cursor: pointer;
+}
+
+.top__link {
+  display: inline-block;
+  position: relative;
+  padding-left: 2.8rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  color: #FF9900;
+  text-decoration: underline;
+}
+
+.top__link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+  width: 1.7rem;
+  height: 1.9rem;
+  background-image: url(../img/play.svg);
+}
