@@ -184,6 +184,11 @@ body {
 
   &__item {
     @include flex($sb);
+    margin-bottom: 10rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &-content {
       max-width: 48.6rem;
@@ -215,5 +220,90 @@ body {
       @include font($f16, $lh26, 700, #2F281E);
       margin-bottom: 1.2rem;
     }
+  }
+
+  &__list {
+    &-item {
+      position: relative;
+      margin-bottom: 3rem;
+      padding-left: 6.5rem;
+
+      &::before {
+        @include pseudo($content: '', $display: block, $pos: absolute);
+        top: 0.9rem;
+        left: 0;
+        width: 3.5rem;
+        height: 3.5rem;
+        background-image: url('../img/check.svg');
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.team {
+  background: url('../img/team-bg.svg') no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  &__inner {
+    padding: 23rem 0 38rem;
+    position: relative;
+  }
+
+  &__item {
+    position: absolute;
+    width: 9.8rem;
+    height: 9.8rem;
+    top: 15.7rem;
+    right: 9.5rem;
+
+    &-img {
+      width: 9.8rem;
+      height: 9.8rem;
+    }
+
+    &-text {
+      position: absolute;
+      display: inline-block;
+      background: #FFFFFF;
+      @include font($f16, $lh24, 500, #2F281E);
+      width: 28.1rem;
+      padding: 1.4rem 1.9rem 2.1rem 2.3rem;
+      border-radius: 2.6rem;
+      box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
+      top: -3rem;
+      right: 7.5rem;
+    }
+  }
+
+  &__box {
+    max-width: 54.2rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    @include font($f36, $lh54, 700, #2F281E);
+    margin-bottom: 2.2rem;
+
+  }
+
+  &__text {
+    @include font($f16, $lh26, 500, #567592);
+    margin-bottom: 4.5rem;
+
+  }
+
+  &__btn {
+    display: inline-block;
+    @include font($f16, $lh24, 700, #FFFFFF);
+    background: #FF9900;
+    border-radius: .4rem;
+    padding: 1.5rem 3rem;
+    cursor: pointer;
   }
 }

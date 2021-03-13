@@ -54,7 +54,7 @@ sans-serif;
 }
 
 
-@mixin pseudo($display: block, $pos: absolute, $content: '') {
+@mixin pseudo($content: '', $display: block, $pos: absolute) {
     content: $content;
     display: $display;
     position: $pos;

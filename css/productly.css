@@ -226,6 +226,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 10rem;
+}
+
+.direction__item:last-child {
+  margin-bottom: 0;
 }
 
 .direction__item-content {
@@ -270,4 +275,100 @@ body {
   font-weight: 700;
   color: #2F281E;
   margin-bottom: 1.2rem;
+}
+
+.direction__list-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 6.5rem;
+}
+
+.direction__list-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.9rem;
+  left: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-image: url("../img/check.svg");
+}
+
+.direction__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.team {
+  background: url("../img/team-bg.svg") no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.team__inner {
+  padding: 23rem 0 38rem;
+  position: relative;
+}
+
+.team__item {
+  position: absolute;
+  width: 9.8rem;
+  height: 9.8rem;
+  top: 15.7rem;
+  right: 9.5rem;
+}
+
+.team__item-img {
+  width: 9.8rem;
+  height: 9.8rem;
+}
+
+.team__item-text {
+  position: absolute;
+  display: inline-block;
+  background: #FFFFFF;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  color: #2F281E;
+  width: 28.1rem;
+  padding: 1.4rem 1.9rem 2.1rem 2.3rem;
+  border-radius: 2.6rem;
+  -webkit-box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
+          box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
+  top: -3rem;
+  right: 7.5rem;
+}
+
+.team__box {
+  max-width: 54.2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.team__title {
+  font-size: 3.6rem;
+  line-height: 5.4rem;
+  font-weight: 700;
+  color: #2F281E;
+  margin-bottom: 2.2rem;
+}
+
+.team__text {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 500;
+  color: #567592;
+  margin-bottom: 4.5rem;
+}
+
+.team__btn {
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: #FF9900;
+  border-radius: .4rem;
+  padding: 1.5rem 3rem;
+  cursor: pointer;
 }
