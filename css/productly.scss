@@ -114,12 +114,12 @@ body {
     text-decoration: underline;
 
     &::before {
+      background-image: url('../img/play.svg');
       @include pseudo($display: block, $pos: absolute, $content: '');
       top: 0.2rem;
       left: 0;
       width: 1.7rem;
       height: 1.9rem;
-      background-image: url(../img/play.svg);
     }
   }
 }
@@ -258,8 +258,6 @@ body {
     position: absolute;
     width: 9.8rem;
     height: 9.8rem;
-    top: 15.7rem;
-    right: 9.5rem;
 
     &-img {
       width: 9.8rem;
@@ -268,15 +266,96 @@ body {
 
     &-text {
       position: absolute;
-      display: inline-block;
       background: #FFFFFF;
       @include font($f16, $lh24, 500, #2F281E);
-      width: 28.1rem;
       padding: 1.4rem 1.9rem 2.1rem 2.3rem;
       border-radius: 2.6rem;
       box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
-      top: -3rem;
-      right: 7.5rem;
+      top: -4.7rem;
+      right: 6rem;
+      white-space: nowrap;
+
+      &.team__item-text--left {
+        top: -5rem;
+        right: auto;
+        left: 5rem;
+      }
+
+      &--right,
+      &--left {
+
+        &::after,
+        &::before {
+          content: "";
+          background: #FFFFFF;
+          position: absolute;
+          border-radius: 50%;
+        }
+
+      }
+
+      &--right {
+        &::after {
+          width: .9rem;
+          height: .9rem;
+          right: 2.5rem;
+          bottom: -3rem;
+
+
+        }
+
+        &::before {
+          width: 1.7rem;
+          height: 1.7rem;
+          right: 4rem;
+          bottom: -1rem;
+        }
+      }
+
+      &--left {
+        &::after {
+          width: .9rem;
+          height: .9rem;
+          left: 3rem;
+          right: auto;
+          bottom: -1.3rem;
+
+
+        }
+
+        &::before {
+          width: 1.7rem;
+          height: 1.7rem;
+          left: 5rem;
+          right: auto;
+          bottom: -1rem;
+        }
+      }
+    }
+
+    &--1 {
+      top: 15.7rem;
+      right: 9.5rem;
+    }
+
+    &--2 {
+      top: 22.3rem;
+      left: 1rem;
+    }
+
+    &--3 {
+      bottom: 23.3rem;
+      left: 21rem;
+    }
+
+    &--4 {
+      right: 32rem;
+      bottom: 13.5rem;
+    }
+
+    &--5 {
+      right: 0;
+      bottom: 25.7rem;
     }
   }
 
