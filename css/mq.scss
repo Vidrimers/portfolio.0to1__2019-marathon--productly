@@ -1,5 +1,11 @@
 @mixin mq($point) {
-    @if $point==lg {
+    @if $point==slg {
+        @media (max-width: 1170px) {
+            @content;
+        }
+    }
+
+    @else if $point==lg {
         @media (max-width: 992px) {
             @content;
         }

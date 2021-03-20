@@ -10,13 +10,13 @@ body {
 }
 
 .marathon {
-  // TODO сделать цвета под верстку
   display: flex;
+  // display: none;
   justify-content: space-evenly;
   background: white;
   opacity: 40%;
   margin-bottom: 1rem;
-  border-bottom: 1px solid $color-4;
+  border-bottom: 1px solid #FF9900;
 
   &__link {
     font-size: 1rem;
@@ -38,6 +38,42 @@ body {
 
 .menu {
   margin-left: auto;
+
+  &__btn {
+    // TODO возможно переделать кнопку
+    display: none;
+    position: relative;
+    width: 4rem;
+    height: 3rem;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      display: block;
+      height: 0.2rem;
+      width: 100%;
+      background-color: #000;
+      top: 1.4rem;
+      left: 0;
+    }
+
+    &::after,
+    &::before {
+      @include pseudo($content: '', $display: block, $pos: absolute);
+      width: 4rem;
+      height: 0.2rem;
+      background-color: #000;
+      left: 0;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+  }
 
   &__list {
     display: flex;

@@ -16,7 +16,7 @@ body {
   background: white;
   opacity: 40%;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #C5AC2D;
+  border-bottom: 1px solid #FF9900;
 }
 
 .marathon__link {
@@ -45,6 +45,42 @@ body {
 
 .menu {
   margin-left: auto;
+}
+
+.menu__btn {
+  display: none;
+  position: relative;
+  width: 4rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.menu__btn span {
+  position: absolute;
+  display: block;
+  height: 0.2rem;
+  width: 100%;
+  background-color: #000;
+  top: 1.4rem;
+  left: 0;
+}
+
+.menu__btn::after, .menu__btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 4rem;
+  height: 0.2rem;
+  background-color: #000;
+  left: 0;
+}
+
+.menu__btn:before {
+  top: 0;
+}
+
+.menu__btn:after {
+  bottom: 0;
 }
 
 .menu__list {
